@@ -1,0 +1,20 @@
+:root{
+    --primary: #D17D7D;           
+    --primary-light: #F2E1E1;     
+    --bg-main: #FDF9F9;           
+    --white: #ffffff;             
+    --text-main: #3E2F2F;         
+    --text-body: #665555;         
+    --text-light: #A18E8E;       
+    --border-color: #EFE1E1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
