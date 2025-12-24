@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Bloom</title>
+    <link rel="icon" href="../picture/logo.png">
+    <link rel="stylesheet" href="../css/activity.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="view">
+        <div class="sidebar">
+            <a href="/html/dashboard.html" class="logo">
+                <img src="../picture/logo.png" alt="logo">
+                <h3>Daily Bloom</h3>
+            </a>
+            <div class="menu">
+                <p class="lable">Tổng quan</p>
+                <a href="../html/dashboard.html" class="label-item active"><i class="fa-solid fa-house"></i>Dashboard</a>
+                <a href="../html/activity.html" class="label-item"><i class="fa-solid fa-chart-line"></i>Hoạt động</a>
+                <a href="../html/classification.html" class="label-item"><i class="fa-solid fa-list"></i></i>Phân loại</a>
+            </div>
+        </div>
+
+
+
+        <div class="container">
+            <div class="header">
+                <div class="element">
+                    <h1>Hôm nay thế nào rồi?</h1>
+                    <p>Thứ Ba, ngày 23 tháng 12 năm 2025</p>
+                </div>
+                <div class="button">
+                    <button class="button-create"><i class="fa-solid fa-plus"></i> Tạo habit mới</button>
+                </div>
+            </div>
+                <div class="dashboard-panel">
+                <div class="panel-header">
+                    <h2><i class="far fa-calendar-alt"></i> Lịch tuần</h2>
+                    <div class="calendar">
+                        <div class="view-switcher">
+                            <button class="header-button-active">Tuần</button>
+                            <button class="header-button">Tháng</button>
+                        </div>
+                        <div class="nav-group">
+                            <button class="nav-button"><i class="fas fa-chevron-left"></i></button>
+                            <span id="calendarLabel">...</span>
+                            <button class="nav-button"><i class="fas fa-chevron-right"></i></button>
+                            
+                            <select class="year-select"></select>
+
+                            <button class="today-button">Hôm nay</button>
+                        </div>
+                    </div>
+                </div>
+                
+    </div>
+</body>
+</html>
