@@ -7,6 +7,7 @@
     <link rel="icon" href="../picture/logo.png">
     <link rel="stylesheet" href="../css/activity.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 </head>
 <body>
     <div class="view">
@@ -17,8 +18,8 @@
             </a>
             <div class="menu">
                 <p class="lable">Tổng quan</p>
-                <a href="../html/dashboard.html" class="label-item active"><i class="fa-solid fa-house"></i>Dashboard</a>
-                <a href="../html/activity.html" class="label-item"><i class="fa-solid fa-chart-line"></i>Hoạt động</a>
+                <a href="../html/dashboard.html" class="label-item"><i class="fa-solid fa-house"></i>Dashboard</a>
+                <a href="../html/activity.html" class="label-item active"><i class="fa-solid fa-chart-line"></i>Hoạt động</a>
                 <a href="../html/classification.html" class="label-item"><i class="fa-solid fa-list"></i></i>Phân loại</a>
             </div>
         </div>
@@ -57,4 +58,32 @@
                 
     </div>
 </body>
+    <div id="habitModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>TẠO THÓI QUEN MỚI</h3>
+                <span class="close-modal">&times;</span>
+            </div>
+            <form id="habitForm">
+                <div class="habit-form">
+                    <label>Tên thói quen bạn muốn đặt</label>
+                    <input type="text" placeholder="Ví dụ: Chạy bộ 30p...">
+                </div>
+                <div class="habit-form">
+                    <label for="date">Chọn ngày bắt đầu:</label>
+                    <input type="date" id="date">
+                </div>
+                <div class="habit-form">
+                    <label for="date">Chọn ngày kết thúc:</label>
+                    <input type="date" id="date">
+                </div>
+                <div class="habit-form">
+                    <label>Thời gian lặp lại</label>
+                    <input type="time" required>
+                </div>
+                <button type="submit" class="button-save">Lưu thói quen</button>
+            </form>
+        </div>
+    </div>
+<script src="../js/activity.js"></script>
 </html>
