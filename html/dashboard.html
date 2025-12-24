@@ -14,15 +14,15 @@
 
 
         <div class="sidebar">
-            <div class="logo">
+            <a href="/html/dashboard.html" class="logo">
                 <img src="../picture/logo.png" alt="logo">
                 <h3>Daily Bloom</h3>
-            </div>
+            </a>
             <div class="menu">
                 <p class="lable">Tổng quan</p>
-                <a href="#" class="label-item active"><i class="fa-solid fa-house"></i>Dashboard</a>
-                <a href="#" class="label-item"><i class="fa-solid fa-chart-line"></i>Hoạt động</a>
-                <a href="#" class="label-item"><i class="fa-solid fa-list"></i></i>Phân loại</a>
+                <a href="../html/dashboard.html" class="label-item active"><i class="fa-solid fa-house"></i>Dashboard</a>
+                <a href="../html/activity.html" class="label-item"><i class="fa-solid fa-chart-line"></i>Hoạt động</a>
+                <a href="../html/classification.html" class="label-item"><i class="fa-solid fa-list"></i></i>Phân loại</a>
             </div>
         </div>
 
@@ -86,7 +86,7 @@
                         </div>
                     </div>
                    
-                    <button class="button-detail">Xem chi tiết</button>
+                    <a href="../html/activity.html" class="button-detail">Xem chi tiết</a>
                 </div>
             </div>
 
@@ -96,7 +96,7 @@
 
                 <div class="habit-header">
                     <h3>Thói quen hôm nay</h3>
-                    <a href="#">Xem tất cả</a>
+                    <a href="../html/activity.html">Xem tất cả</a>
                 </div>
                 
                 <div class="habit-list">
@@ -146,4 +146,33 @@
         </div>
     </div>
 </body>
+    <div id="habitModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>TẠO THÓI QUEN MỚI</h3>
+                <span class="close-modal">&times;</span>
+            </div>
+            <form id="habitForm">
+                <div class="habit-form">
+                    <label>Tên thói quen bạn muốn đặt</label>
+                    <input type="text" placeholder="Ví dụ: Chạy bộ 30p..." required>
+                </div>
+                <div class="habit-form">
+                    <label for="date">Chọn ngày bắt đầu:</label>
+                    <input type="date" id="date">
+                </div>
+                <div class="habit-form">
+                    <label for="date">Chọn ngày kết thúc:</label>
+                    <input type="date" id="date">
+                </div>
+                <div class="habit-form">
+                    <label>Thời gian lặp lại</label>
+                    <input type="time" required>
+                </div>
+                <button type="submit" class="button-save">Lưu thói quen</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
 </html>

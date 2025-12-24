@@ -42,6 +42,7 @@ body {
 }
 
 .logo {
+    text-decoration: none;
     display: flex;
     align-items: center;
     gap: 0.75rem;
@@ -71,6 +72,8 @@ body {
 
 
 .label-item{
+    min-height: 3.25rem;
+    min-width: 3.25rem;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -79,7 +82,7 @@ body {
     color: var(--text-body);
     font-weight: 600;
     border-radius: 0.75rem;
-    margin-bottom: 0.5rem;
+
     transition: all 0.3s;
 }
 
@@ -97,16 +100,18 @@ body {
     width: 1.25rem;
 }
 .container {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
     padding: 2rem 3rem;
     overflow-y: auto;
+    gap:4rem;
+    flex:1;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 2.5rem;
 
 }
 
@@ -127,10 +132,9 @@ body {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
-    margin-bottom: 3rem;
 }
 
-.card1 {
+.card1{
     background: var(--primary);
     border-radius: 2rem;
     padding: 2.5rem;
@@ -254,6 +258,7 @@ body {
 
 
 .button-detail {
+    min-height: 3.25rem;
     font-size: 1rem;
     padding: 0.8rem 2rem;
     border: 2px solid var(--primary-light);
@@ -263,6 +268,7 @@ body {
     font-weight: 700;
     cursor: pointer;
     transition: all 0.3s;
+    text-decoration: none;
 }
 
 .button-detail:hover {
@@ -272,6 +278,8 @@ body {
 }
 
 .button-create {
+    min-height: 3rem;
+    min-width: 10rem;
     padding: 1rem 1.5rem;
     background: var(--primary);
     color: var(--white);
@@ -318,16 +326,16 @@ body {
 
 .habit {
     background: var(--white);
-    padding: 2rem;
     border-radius: 2rem;
     border: 1px solid var(--border-color);
+    padding:1.5rem;
 }
 
 .habit-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 .habit-header a {
@@ -350,7 +358,6 @@ body {
     background: var(--white);
     border-radius: 1.5rem;
     border: 1px solid var(--border-color); 
-    margin-bottom: 1rem;
     transition: all 0.3s ease;
 }
 
@@ -361,6 +368,7 @@ body {
 
 
 .habit-info {
+    min-height: 3.25rem;
     display: flex;
     align-items: center;
     justify-content: flex-start; 
@@ -426,58 +434,165 @@ body {
     transform: scale(1);
 }
 
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+}
+.modal-content {
+    min-width: 30vw;
+    background-color: var(--white);
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 2rem;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 1rem 3rem var(--shadow);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.modal-header h3 {
+    font-size: 1.5rem;
+}
+.close-modal {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-light);
+}
+.habit-form {
+    margin-bottom: 1.2rem;
+    min-height: fit-content;
+}
+
+.habit-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.habit-form input {
+    min-height: fit-content;
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    font-family: inherit;
+}
+
+.button-save {
+    width: 100%;;
+    padding: 1rem;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
 
 
-
-
-
-
-
-
-
-/* --- SLIM SIDEBAR (64rem) --- */
-@media (max-width: 64rem) {
+@media (max-width: 1024px) {
     .sidebar {
-        width: 5rem; /* Thu nhỏ sidebar tối đa */
-        padding: 1.5rem 0.5rem; /* Giảm padding hai bên */
-        align-items: center; /* Căn giữa các icon */
+        width: 4.5rem;
+        padding: 1.5rem 0.5rem;
+        align-items: center;
     }
-
-    /* Ẩn hoàn toàn các thành phần chữ để tránh lỗi tràn */
-    .logo h3, 
-    .lable, 
-    .label-item span, 
-    .lable-item span {
-        display: none; /* Đảm bảo không còn chữ xuất hiện */
+    .logo h3, .lable {
+        display: none;
     }
-
-    .logo {
-        margin-bottom: 2rem; /* Thu hẹp khoảng cách logo */
+    .label-item {
+        font-size: 0;
+        display: flex; 
+   
+        align-items: center;
+        width: 3.2rem;
+        height: 3.2rem;
+        
     }
-
-    .logo img {
-        width: 2.2rem; /* Thu nhỏ nhẹ logo để cân đối */
-        height: 2.2rem;
-    }
-
-    /* Biến các nút menu thành những ô vuông nhỏ */
-    .label-item, .lable-item {
-        width: 3rem; 
-        height: 3rem;
-        justify-content: center;
-        padding: 0;
-        margin-bottom: 0.8rem;
-        border-radius: 0.8rem; /* Bo góc nhẹ cho hiện đại */
-    }
-
-    .label-item i, .lable-item i {
-        font-size: 1.2rem; /* Giữ icon rõ ràng */
+    .label-item i {
+        font-size: 1.25rem;
         margin: 0;
     }
 
-    /* Mở rộng nội dung chính khi sidebar thu nhỏ */
     .container {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .sidebar-container {
+        flex-direction: column;
+    }
+    .sidebar-container .sidebar{
+        min-width: 100vw;
+        height: auto;
+        padding: 1rem;
+        border-bottom: 1px solid var(--border-color);
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0;
+    }
+    .logo h3 {
+        display: block;
+        font-size: 1.2rem;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        gap: 1.2rem;
+    }
+
+    .container .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+
+    .header .element h1 {
+        font-size: 1.5rem;
+    }
+    .header .button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .container .box1 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .card1-box {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .hatbit-header h3{
+        font-size: 0.5rem;
+    }
+
+    .box-card {
+        width: 100%;
     }
 }
