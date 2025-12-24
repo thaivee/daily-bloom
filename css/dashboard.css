@@ -1,0 +1,483 @@
+/* Import font chữ Nunito */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+:root {
+
+    --primary: #D17D7D;
+    --primary-light: #F2E1E1;
+    --bg-main: #FDF9F9; 
+    --white: #ffffff;
+    --text-main: #3E2F2F;
+    --text-body: #665555;
+    --text-light: #A18E8E;
+    --border-color: #EFE1E1;
+    --shadow: rgba(209, 125, 125, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-body);
+}
+
+.sidebar-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+.sidebar {
+    width: 18rem;
+    background: var(--white);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border-color);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 3rem;
+}
+
+.logo img {
+    height: 3rem;
+    width: 3rem;
+}
+
+.logo h3 {
+    color: var(--primary);
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.lable {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+
+
+.label-item{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 1rem;
+    text-decoration: none;
+    color: var(--text-body);
+    font-weight: 600;
+    border-radius: 0.75rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s;
+}
+
+.label-item.active {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.label-item:hover:not(.active){
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.label-item i {
+    width: 1.25rem;
+}
+.container {
+    flex: 1;
+    padding: 2rem 3rem;
+    overflow-y: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2.5rem;
+
+}
+
+.element h1 {
+    color: var(--text-main);
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.element p {
+    color: var(--text-light);
+}
+
+
+
+
+.box1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.card1 {
+    background: var(--primary);
+    border-radius: 2rem;
+    padding: 2.5rem;
+    /* color: var(--white); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 25rem;
+    box-shadow: 0 1rem 3rem var(--shadow);
+}
+
+.card1 h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+}
+
+.card1-subtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.card1-box {
+    height: fit-content;
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem 0.5rem;
+}
+
+.box-card {
+    background-color: var(--white);
+    flex: 1;
+    padding: 1.2rem;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 0.5rem 1rem (--primary);
+}
+
+.box-icon {
+    width: 3.2rem;
+    height: 3.2rem;
+    background: var(--bg-main);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 2rem;
+}
+.box-info{
+    gap:0.2rem;
+    display:flex;
+    flex-direction: column;
+}
+.box-info-label {
+    color: var(--text-main);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.box-info-value{
+    color: var(--text-body);
+    font-size: 1rem;
+    font-weight: 800;
+    opacity: 0.7;
+}
+
+.card-status {
+    background: var(--white);
+    border-radius: 2rem;
+    padding: 2.5rem;
+    text-align: center;
+    border: 1px solid var(--border-color); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1rem 2.5rem var(--shadow);
+    min-height: 25rem;
+}
+
+.card-status h3 {
+    color: var(--text-main);
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+
+.circle {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    background: conic-gradient(var(--primary) 65%, var(--primary-light) 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.circle-value {
+    width: 7rem;
+    height: 7rem;
+    background: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-value .percent {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+
+.button-detail {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    border: 2px solid var(--primary-light);
+    background: transparent;
+    color: var(--primary);
+    border-radius: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.button-detail:hover {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+.button-create {
+    padding: 1rem 1.5rem;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.button-create:hover {
+    transform: scale(1.1);
+}
+
+.status {
+    background: var(--white);
+    border-radius: 2rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 1rem 2rem var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+.progress {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    border: 10px solid var(--primary-light);
+    border-top-color: var(--primary);
+    margin: 1.5rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.percent {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.habit {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.habit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.habit-header a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.habit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.habit-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem;
+    background: var(--white);
+    border-radius: 1.5rem;
+    border: 1px solid var(--border-color); 
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.habit-item:hover {
+    border-color: var(--primary);
+    background: #fffafa;
+}
+
+
+.habit-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 1.2rem;
+    flex: 1; 
+}
+.habit-icon {
+    width: 3.2rem;
+    height: 3.2rem;
+    background: var(--bg-main);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary); 
+    font-size: 1.3rem;
+}
+
+
+.habit-action {
+    position: relative; 
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.habit-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid var(--primary-light); 
+    border-radius: 50%; 
+    background-color: var(--white);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.habit-action i {
+    position: absolute;
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 900;
+
+    pointer-events: none;
+    transform: scale(0);
+
+
+    z-index: 2;
+}
+
+
+.habit-checkbox:checked {
+    background-color: var(--primary); 
+    border-color: var(--primary);
+}
+
+.habit-checkbox:checked + i {
+    transform: scale(1);
+}
+
+
+
+
+
+
+
+
+
+
+/* --- SLIM SIDEBAR (64rem) --- */
+@media (max-width: 64rem) {
+    .sidebar {
+        width: 5rem; /* Thu nhỏ sidebar tối đa */
+        padding: 1.5rem 0.5rem; /* Giảm padding hai bên */
+        align-items: center; /* Căn giữa các icon */
+    }
+
+    /* Ẩn hoàn toàn các thành phần chữ để tránh lỗi tràn */
+    .logo h3, 
+    .lable, 
+    .label-item span, 
+    .lable-item span {
+        display: none; /* Đảm bảo không còn chữ xuất hiện */
+    }
+
+    .logo {
+        margin-bottom: 2rem; /* Thu hẹp khoảng cách logo */
+    }
+
+    .logo img {
+        width: 2.2rem; /* Thu nhỏ nhẹ logo để cân đối */
+        height: 2.2rem;
+    }
+
+    /* Biến các nút menu thành những ô vuông nhỏ */
+    .label-item, .lable-item {
+        width: 3rem; 
+        height: 3rem;
+        justify-content: center;
+        padding: 0;
+        margin-bottom: 0.8rem;
+        border-radius: 0.8rem; /* Bo góc nhẹ cho hiện đại */
+    }
+
+    .label-item i, .lable-item i {
+        font-size: 1.2rem; /* Giữ icon rõ ràng */
+        margin: 0;
+    }
+
+    /* Mở rộng nội dung chính khi sidebar thu nhỏ */
+    .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}

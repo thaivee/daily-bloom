@@ -1,8 +1,8 @@
-/* Import font chữ Nunito - thân thiện và hiện đại */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
 
+
+
 :root {
-    /* Bảng màu Rose-Dusty đã thống nhất */
     --primary: #D17D7D;
     --primary-light: #F2E1E1;
     --bg-main: #FDF9F9;
